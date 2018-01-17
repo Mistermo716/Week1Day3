@@ -47,3 +47,42 @@ function findById(items, idNum)
 console.log('=====================');
 const studentData = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
 console.log(findById(studentData, 2));
+
+console.log("==================")
+
+// running the function with `objectA` and `expectedKeys`
+// should return `true`
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
+};
+
+// running the function with `objectB` and `expectedKeys`
+// should return `false`
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria',
+};
+
+const expectedKeys = ['id', 'name', 'age', 'city'];
+
+function validateKey(obj, expectedKeys){
+  const keys = Object.keys(obj)
+  if (keys.length !== expectedKeys.length){
+    return false
+  }
+  keys.forEach( key =>{
+    const found = expectedKeys.find( element => {
+      if(element !== key) { return false}
+    })
+  })
+
+  return true
+
+}
+
+console.log(validateKey(objectA, expectedKeys))
+console.log(validateKey(objectB, expectedKeys))
