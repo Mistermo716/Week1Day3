@@ -30,3 +30,13 @@ function personMaker() {
     };
     return person;
 }
+
+function keyDeleter(obj){
+    delete obj.foo
+    delete obj.bar
+    return obj
+}
+console.log("========================")
+console.log(test)
+keyDeleter(test)
+console.log(test)
