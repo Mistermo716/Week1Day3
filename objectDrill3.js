@@ -27,13 +27,25 @@ const hobbit = {
 };
 console.log(hobbit.meals[3]);
 
+console.log('=========================');
 const people = [
-    {name:"zhou", jobTitle:"student"},
-    {name:"Mo", jobTitle:"student"},
-    {name:"Ray", jobTitle:"the last jedi"},
-    {name:"Kobe Bryant", jobTitle:"pro basketball player"}
+    {name:"zhou", jobTitle:"student",boss:"Boss Man"},
+    {name:"Mo", jobTitle:"student",boss:"Boss Man"},
+    {name:"Ray", jobTitle:"the last jedi",boss:"Boss Man"},
+    {name:"Kobe Bryant", jobTitle:"pro basketball player",boss:"Boss Man"},
+    {name:"Boss Man", jobTitle:"CEO", boss:null}
+    
 
 ]
 people.forEach( person =>{
-    console.log(`${person.name} : ${person.jobTitle}`)
+    if(person.boss === null)
+    {
+        console.log(`${person.jobTitle} ${person.name} doesn't report to anybody."`);
+    }
+    else
+    {
+    console.log(`${person.jobTitle} ${person.name} reports to ${person.boss}.`)
+    }
 })
+
+
