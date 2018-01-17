@@ -26,3 +26,14 @@ const hobbit = {
 
 };
 console.log(hobbit.meals[3]);
+
+const people = [
+    {name:"zhou", jobTitle:"student"},
+    {name:"Mo", jobTitle:"student"},
+    {name:"Ray", jobTitle:"the last jedi"},
+    {name:"Kobe Bryant", jobTitle:"pro basketball player"}
+
+]
+people.forEach( person =>{
+    console.log(`${person.name} : ${person.jobTitle}`)
+})
